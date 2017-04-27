@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+<!--	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/jquery.sticky.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<!--	<script src="..//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+<!--	<script src="/js/jquery-ui.min.js"></script>-->
+	
+	<script src="/js/jquery-ui-1.12.1/"></script>	
+	<script src="/js/dyscrollup.min.js"></script>
+	<script src="/js/jquery.mobilemenu.js"></script>
+<!--	<script src="/js/myJquery.js"></script>-->
+
+<!--	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+	<script>
+		$(document).ready(function() {
+			$('#responsive-menu').mobileMenu();
+		});
+	</script>
+</head>
+<body>
+
+	<main class="container">
+		<figure class="three columns">
+			<img src="/images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+		<div id="sticker">
+			<ul id="responsive-menu">
+				<li><a class="hide-option" href="../index.html" title="This is Vecta Corp. Home">Home</a></li>
+				
+				<li><a class="hide-option" href="/pages/aboutus.html" title="This is Vecta Corp. About Page">About Us</a></li>
+				
+				<li><a class="hide-option" href="/pages/solutions.html" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers. This is the Solutions Page">Solutions</a></li>
+				
+				<li><a class="hide-option" href="/pages/support.html" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers. This is the Support Page">Support</a></li>
+				
+				<li><a class="hide-option" href="/pages/contactus.html" title="This is Vecta Corp. Contact Page">Contact Us</a></li>
+			</ul>
+			</div><!--end of id sticker3 -->	
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="/images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+			    <legend>Contact a Sales Representative</legend>
+			    Name:
+			    <input type="text" name="name" maxlength="30" required="">
+			    Company Name:
+			    <input type="text" name="companyname" maxlength="30" required="">
+			    Phone:
+			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
+			    Email:
+				<input type="email" name="email" maxlength="30" required="">
+					
+			   <fieldset id="prod">
+                <legend>What VectaCorp products are you interested in?</legend>
+			
+			    <label for="vProspect"><input type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
+			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
+			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
+			    </fieldset>
+			    <br>
+				<div class="widget">
+<!--			    What is your current infrastructure?<br>-->
+				<fieldset id="infra">
+				<legend>What is your current infrastructure?</legend>
+			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
+			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
+			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
+			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
+				</fieldset>
+				</div>
+			    <br>
+				<fieldset>
+			    <legend>How many employees do you have?</legend>
+			    <select name="companysize" id="employeesNumber">
+                    <option value="1-10">1-10</option>
+                    <option value="11-100">11-100</option>
+                    <option value="101-1000">101-1000</option>
+                    <option value="More than 1000">More than 1000</option>
+		        </select>
+                </fieldset>
+				<fieldset>
+			    <legend>How did you hear about us?</legend>
+			    <select name="hearaboutus" multiple="" size="5">
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Radio Ad">Radio Ad</option>
+                    <option value="TV Ad">TV Ad</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+		        </select>
+                </fieldset>
+			    Questions or comments for our sales representatives?
+			    <textarea name="questions" size="30" rows="5"></textarea>
+				
+				<div id="dialog" title="Thank you">
+  					<p>Thank you for your inquiry</p>
+				</div>
+ 
+		<button id="submit">Submit Now</button>
+					
+<!--			    <input type="submit" name="submit" id="submit" value="Submit Now">-->
+		    	</fieldset>
+			</form>
+	    </section>
+		
+		<section id="testimonials" class="five columns">
+			<h4>Map</h4>
+			<p>&nbsp;</p>
+
+		</section>
+	</main>
+
+<!--JS	-->
+<script>
+$(document).ready(function() {
+	//// MAIN MENU //////
+	$(".hide-option").tooltip({
+      hide: { effect : "explode",
+        	  delay : 250
+			}
+    });
+	
+	$("#sticker").sticky({ topSpacing: 0 });
+	
+//// CONTACT PAGE CHECK BOX and RADIO BUTTONS //////	
+	
+	$( function() {
+//    $( "input" ).checkboxradio();
+//    $( "fieldset" ).controlgroup();
+	$( "#prod" ).checkboxradio();
+    $( "#infra" ).controlgroup();
+  	});
+	
+//// CONTACT PAGE SELECT MENU //////
+$( function() {   $("#employeesNumber").selectmenu().selectmenu("menuWidget").addClass( "overflow");
+  });
+
+//// CONTACT PAGE DIALOG BOX //////
+  $( function() {   
+	$( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1500
+      },
+      hide: {
+        effect: "explode",
+        duration: 1500
+      }
+    });
+	$( "#submit" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+ });
+
+});
+	</script>
+</body>
+</html>
